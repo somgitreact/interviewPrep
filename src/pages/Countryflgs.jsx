@@ -15,7 +15,7 @@ const Countryflgs = () => {
     <div className='flagwrp'>
         <h1>Countryflgs</h1>
         <div className='flagbody'>
-         { countries.map((value) => <Flagcard key={value.abbr} item={value} />)}
+         { countries?.map((value) => <Flagcard key={value.abbr} item={value} />)}
         </div>
     </div>
   )
