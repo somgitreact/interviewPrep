@@ -63,7 +63,12 @@ const Searchcountriesdetails = () => {
             <option value="">Select City</option>
               {city.map((item)=> <option key={item} value={item.trim()}>{item}</option>)} 
         </select>
-       {select.cityName && <div className='infodiv'>“You selected {select.cityName}, {select.stateName}, {select.countryName}": </div>}
+      {select.countryName && select.stateName && select.cityName && (
+  <h3>
+    You selected {select.cityName}, {select.stateName}, {select.countryName}
+  </h3>
+)}
+       {/* {select.cityName && <div className='infodiv'>“You selected {select.cityName}, {select.stateName}, {select.countryName}": </div>} */}
     </div>
   )
 }
