@@ -6,11 +6,15 @@ const Searchcountriesdetails = () => {
   const [countries, setCountries] = useState([])
   const [state, setState] = useState([])
   const [city, setCity] = useState([])
-  const [select, setSelect] = useState({})
+const [select, setSelect] = useState({
+  countryName: "",
+  stateName: "",
+  cityName: ""
+});
   const [showdata, setShowData] = useState(false)
     useEffect(()=>{
        const fetchdata = async()=>{
-      const res =  await allPurpousData('https://crio-location-selector.onrender.com/countries')
+      const res =  await allPurpousData('https://location-selector.labs.crio.do/countries')
       //console.log(res);
       setCountries(Array.isArray(res) ? res : [] )
        } 
@@ -55,11 +59,11 @@ const Searchcountriesdetails = () => {
           <option value="" >Select Country</option>
           {countries.map((item)=> <option key={item} value={item.trim()}>{item}</option>)}            
         </select>
-  <select name="stateName"  value={select.stateName} disabled={state.length == 0}  onChange={changhandler}>
+  <select name="stateName"  value={select.stateName} disabled={!select.state}  onChange={changhandler}>
             <option value="" >Select State</option>
              {state.map((item)=> <option key={item} value={item.trim()}>{item}</option>)} 
         </select>
-          <select name="cityName"  value={select.cityName} disabled={city.length == 0}  onChange={changhandler}>
+          <select name="cityName"  value={select.cityName} disabled={!select.city}  onChange={changhandler}>
             <option value="">Select City</option>
               {city.map((item)=> <option key={item} value={item.trim()}>{item}</option>)} 
         </select>
