@@ -57,15 +57,21 @@ const [select, setSelect] = useState({
     <div>
         <select name="countryName"  value={select.countryName} onChange={changhandler}>
           <option value="" >Select Country</option>
-          {countries.map((item)=> <option key={item} value={item.trim()}>{item}</option>)}            
+          {countries.map((item)=> <option key={item} value={item}>{item}</option>)}            
         </select>
-  <select name="stateName"  value={select.stateName} disabled={!select.state}  onChange={changhandler}>
+  <select name="stateName"  value={select.stateName} 
+  // disabled={!select.state}
+  disabled={!select.countryName} 
+   onChange={changhandler}>
             <option value="" >Select State</option>
-             {state.map((item)=> <option key={item} value={item.trim()}>{item}</option>)} 
+             {state.map((item)=> <option key={item} value={item}>{item}</option>)} 
         </select>
-          <select name="cityName"  value={select.cityName} disabled={!select.city}  onChange={changhandler}>
+          <select name="cityName"  value={select.cityName} 
+          //disabled={!select.city} 
+          disabled={!select.stateName}
+           onChange={changhandler}>
             <option value="">Select City</option>
-              {city.map((item)=> <option key={item} value={item.trim()}>{item}</option>)} 
+              {city.map((item)=> <option key={item} value={item}>{item}</option>)} 
         </select>
       {select.countryName && select.stateName && select.cityName && (
   <h3>
