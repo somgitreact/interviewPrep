@@ -51,15 +51,15 @@ const Searchcountriesdetails = () => {
      
   return (
     <div>
-        <select name="countryName" id="" onChange={changhandler}>
+        <select name="countryName"  value={select.countryName} onChange={changhandler}>
           <option value="" >Select Country</option>
           {countries.map((item)=> <option key={item} value={item.trim()}>{item}</option>)}            
         </select>
-  <select name="stateName" id="" disabled={state.length == 0}  onChange={changhandler}>
+  <select name="stateName"  value={select.stateName} disabled={state.length == 0}  onChange={changhandler}>
             <option value="" >Select State</option>
              {state.map((item)=> <option key={item} value={item.trim()}>{item}</option>)} 
         </select>
-          <select name="cityName" id="" disabled={city.length == 0}  onChange={changhandler}>
+          <select name="cityName"  value={select.cityName} disabled={city.length == 0}  onChange={changhandler}>
             <option value="">Select City</option>
               {city.map((item)=> <option key={item} value={item.trim()}>{item}</option>)} 
         </select>
