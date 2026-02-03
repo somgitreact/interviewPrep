@@ -11,3 +11,14 @@ export const Apiresult = async (apiendpoint)=>{
     }
     
 }
+
+export const allPurpousData = async (apiendpoint)=>{
+    try {
+     const res = await axios.get(apiendpoint)
+    return res.data   
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    return [];   
+    }
+    
+}
