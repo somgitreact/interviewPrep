@@ -9,10 +9,10 @@ function App() {
 
 
   return (
-    // <BrowserRouter>
-    // <NavigationPage />
-    // </BrowserRouter>
+    <>
     <Displayname />
+    </>
+    
 
   )
 }
