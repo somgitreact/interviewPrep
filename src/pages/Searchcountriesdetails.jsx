@@ -11,7 +11,7 @@ const Searchcountriesdetails = () => {
     useEffect(()=>{
        const fetchdata = async()=>{
       const res =  await allPurpousData('https://crio-location-selector.onrender.com/countries')
-      console.log(res);
+      //console.log(res);
       setCountries(Array.isArray(res) ? res : [] )
        } 
        fetchdata()
@@ -26,7 +26,7 @@ const Searchcountriesdetails = () => {
  if (!select.countryName) return;
        const fetchdata = async()=>{
       const res =  await allPurpousData(`https://location-selector.labs.crio.do/country=${select.countryName}/states`)
-      console.log(res);
+      //console.log(res);
       setState(Array.isArray(res) ? res : [] )
                 setSelect((prev)=> ({...prev, stateName: "", cityName: ""}))
        } 
@@ -40,14 +40,14 @@ const Searchcountriesdetails = () => {
               if (!select.countryName || !select.stateName) return;
        const fetchdata = async()=>{
       const res =  await allPurpousData(`https://location-selector.labs.crio.do/country=${select.countryName}/state=${select.stateName}/cities`)
-      console.log(res);
+      //console.log(res);
       setCity(Array.isArray(res) ? res : [] )
         setSelect((prev)=> ({...prev, cityName: ""}))
        } 
        fetchdata()
     },[select.countryName, select.stateName])
 
-     console.log("select data", select);
+   //  console.log("select data", select);
      
   return (
     <div>
