@@ -7,7 +7,7 @@ const Countryflgs = () => {
      useEffect(()=>{
            const data = async ()=>{
               const dataresp = await Apiresult('all')
-              setCountries(dataresp)
+              setCountries(Array.isArray(dataresp) ? dataresp : []);
            }
            data()
      },[])

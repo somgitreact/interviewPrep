@@ -6,7 +6,8 @@ export const Apiresult = async (apiendpoint)=>{
      const res = await axios.get(`https://xcountries-backend.labs.crio.do/${apiendpoint}`)
     return res.data   
     } catch (error) {
-        console.log(error.message);   
+        console.error("API Error:", error.message);
+    return [];   
     }
     
 }
