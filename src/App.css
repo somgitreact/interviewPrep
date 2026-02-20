@@ -1,8 +1,9 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  width: 100%;
 }
 
 .logo {
@@ -17,7 +18,41 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+.table th {
+  background-color: #0ac804;
+  color: #fff;
+  padding: 9px 0;
+}
+.table {
+  border: 1px solid;
+}
+.table td {
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+.table tr:nth-child(odd) {
+  background-color: #eee;
+}
 
+.btnside {
+  background-color: #0ac804;
+  border-radius: 5px;
+  padding: 5px 36px;
+  color: #fff;
+  font-weight: 600;
+}
+.btn {
+  background-color: #0ac804;
+  color: #fff;
+  border-radius: 5px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  padding: 20px 0;
+  align-items: center;
+}
 .flagbody {
 	display: flex;
 	flex-wrap: wrap;

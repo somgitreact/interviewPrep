@@ -4,15 +4,15 @@ import Flagcard from '../component/Flagcard'
 
 const Countryflgs = () => { 
      const [countries, setCountries] = useState([])
-     console.log("-------",countries);
+    // console.log("-------",countries);
      
           const [serchcountries, setSerchcountries] = useState(countries)
      const [txtinp, setTxtinp] = useState('')
      useEffect(()=>{
            const data = async ()=>{
              // const dataresp = await Apiresult('countries')
-              const dataresp = await Apiresult()
-              console.log("dddd", dataresp);
+              const dataresp = await Apiresult(`https://countries-search-data-prod-812920491762.asia-south1.run.app/countries`)
+             // console.log("dddd", dataresp);
               
               setCountries(Array.isArray(dataresp) ? dataresp : []);
               setSerchcountries(Array.isArray(dataresp) ? dataresp : [])
