@@ -3,15 +3,15 @@ import { Apiresult } from '../api/Allapi'
 
 const Xpagination = () => {
      const [employee, setEmployee] = useState([])
-     const [curntemp, setCurntemp] = useState()
+     const [curntemp, setCurntemp] = useState([])
      const [count, setCount] = useState({'start':0, 'end':10})
      let dividCunt= Math.ceil(employee.length / 10);
-     console.log(dividCunt);
+     //console.log(dividCunt);
      
     useEffect(()=>{
          const apidata = async ()=>{
              const fetchdata =  await Apiresult('https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json')
-             console.log(fetchdata);
+           //  console.log(fetchdata);
              setEmployee(fetchdata)
          }
          apidata()
@@ -24,14 +24,14 @@ const Xpagination = () => {
      // console.log(dividCunt);
             const showpost = employee.slice(count.start, count.end)
             setCurntemp(showpost)
-            console.log("showpost", showpost);
+           // console.log("showpost", showpost);
             
     }
     paged()
     },[employee, count])
 
     const paginationHandler = (direct)=>{
-     console.log(count.end);
+    // console.log(count.end);
      
       if (dividCunt > count.end && direct === 'nxt'){
        setCount(prev => ({...prev, 'start':prev.end , 'end':prev.end + 10})) 
@@ -44,7 +44,7 @@ const Xpagination = () => {
     }
 
     const pagbtn = (num)=>{
-     console.log(num);
+   //  console.log(num);
      setCount(prev => ({...prev, 'start':num*10 , 'end':(num*10)+10})) 
       // if (dividCunt > count.end && direct === 'nxt'){
       //  setCount(prev => ({...prev, 'start':prev.end , 'end':prev.end + 10})) 

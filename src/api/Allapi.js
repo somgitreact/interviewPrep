@@ -11,6 +11,7 @@ export const Apiresult = async (apilink)=>{
     return res.data   
     } catch (error) {
         console.error("Error fetching data:", error); 
+        alert(error.message)
     return [];   
     }
     
