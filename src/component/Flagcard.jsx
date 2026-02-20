@@ -2,9 +2,9 @@ import React from 'react'
 
 const Flagcard = ({item}) => {
   return (
-    <div className='card'>
-        <img src={item.flag} className='cardimg' alt={item.name} />
-        <h6 className='countryname'>{item.name}</h6>
+    <div className='card countryCard'>
+        <img src={item.png} className='cardimg' alt={item.common} />
+        <h6 className='countryname'>{item.common}</h6>
     </div>
   )
 }

@@ -32,12 +32,13 @@
   height: 100vh;
 }
 .card {
-  width: 150px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
+	width: 150px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	height: 200px;
 }
 .cardimg {
   height: 100%;
@@ -47,6 +48,16 @@
 .countryname {
   margin: 0;
   font-size: 18px;
+}
+.search input {
+  line-height: 27px;
+  width: 376px;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 36px;
 }
 .mainwrap {
 	display: flex;
