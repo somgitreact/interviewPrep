@@ -68,6 +68,8 @@ const Xpagination = () => {
                 <th>Email</th>
                 <th>Role</th>
             </tr>
+
+<tbody>
             {
               curntemp?.map((value) => {
                 return (
@@ -77,7 +79,7 @@ const Xpagination = () => {
                 )
               })
             }
-            
+           </tbody> 
         </table>
         <div className='pagination'>
           <button className='btnside' onClick={()=>paginationHandler('prv')}>Previous</button>
